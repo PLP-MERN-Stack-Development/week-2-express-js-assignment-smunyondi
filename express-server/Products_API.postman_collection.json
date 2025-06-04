@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "ad4d4bd4-94cd-421e-aedb-13010a17d054",
+		"name": "Products API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43736886"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				},
+				"description": "Fetching for greatings"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Tablet\",\r\n  \"description\": \"10-inch display\",\r\n  \"price\": 300,\r\n  \"category\": \"electronics\",\r\n  \"inStock\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "Fetching all the products"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/products",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Tablet\",\r\n  \"description\": \"10-inch display\",\r\n  \"price\": 300,\r\n  \"category\": \"electronics\",\r\n  \"inStock\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "Posting a product"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/products/3a1cb04a-70ce-4a1f-afb2-4f4d265b6055",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/3a1cb04a-70ce-4a1f-afb2-4f4d265b6055",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"3a1cb04a-70ce-4a1f-afb2-4f4d265b6055"
+					]
+				},
+				"description": "Fetching the previously posted product by id that was automatically generated will posting."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/products/3a1cb04a-70ce-4a1f-afb2-4f4d265b6055",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Tablet Pro\",\r\n  \"description\": \"12-inch display\",\r\n  \"price\": 400,\r\n  \"category\": \"electronics\",\r\n  \"inStock\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/products/3a1cb04a-70ce-4a1f-afb2-4f4d265b6055",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"3a1cb04a-70ce-4a1f-afb2-4f4d265b6055"
+					]
+				},
+				"description": "Updating the previously added product with new details"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/products/3a1cb04a-70ce-4a1f-afb2-4f4d265b6055",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/3a1cb04a-70ce-4a1f-afb2-4f4d265b6055",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"3a1cb04a-70ce-4a1f-afb2-4f4d265b6055"
+					]
+				},
+				"description": "Fetching the product to check for the updates"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/products/3a1cb04a-70ce-4a1f-afb2-4f4d265b6055",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/3a1cb04a-70ce-4a1f-afb2-4f4d265b6055",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"3a1cb04a-70ce-4a1f-afb2-4f4d265b6055"
+					]
+				},
+				"description": "Deleting a product previously posted"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/products/3a1cb04a-70ce-4a1f-afb2-4f4d265b6055e",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products/3a1cb04a-70ce-4a1f-afb2-4f4d265b6055",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"3a1cb04a-70ce-4a1f-afb2-4f4d265b6055"
+					]
+				},
+				"description": "Fetching the product previously added to confirm the product was deleted"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "Fetching all products to confirm succesful testing"
+			},
+			"response": []
+		}
+	]
+}
